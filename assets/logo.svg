@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 340" role="img" aria-label="Panorama Skylight — the right view">
+  <!-- Mountain "M" mark (centered at x=360) -->
+  <g>
+    <polygon points="212.7,229.6 337.3,229.6 275,37" fill="#2b5a9f"/>
+    <polygon points="382.6,229.6 507.3,229.6 445,37" fill="#2b5a9f"/>
+    <polygon points="360,37 411,133.3 360,229.6 309,133.3" fill="#f4c02f"/>
+  </g>
+  <!-- Wordmark -->
+  <text x="360" y="278" text-anchor="middle"
+        font-family="'Poppins','Montserrat','Segoe UI',Arial,sans-serif"
+        font-size="52" font-weight="700" letter-spacing="1"
+        fill="#1d3f74">PANORAMA <tspan fill="#2b5a9f">SKYLIGHT</tspan></text>
+  <!-- Tagline -->
+  <text x="360" y="320" text-anchor="middle"
+        font-family="'Poppins','Montserrat','Segoe UI',Arial,sans-serif"
+        font-size="27" font-style="italic" font-weight="500"
+        fill="#4a5763">the right view</text>
+</svg>
