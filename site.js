@@ -130,6 +130,16 @@
     var y = document.getElementById("year");
     if (y) y.textContent = String(new Date().getFullYear());
 
+    // Quote form endpoint (FormSubmit by default, or a custom endpoint)
+    var form = document.getElementById("quoteForm");
+    if (form) {
+      var endpoint = c.formEndpoint && c.formEndpoint.trim()
+        ? c.formEndpoint.trim()
+        : "https://formsubmit.co/ajax/" + encodeURIComponent(c.email || "");
+      form.setAttribute("data-endpoint", endpoint);
+      form.setAttribute("data-email", c.email || "");
+    }
+
     // Document title / meta based on brand
     if (c.brandName) {
       document.title = c.brandName + " — " + (c.brandTag || "") + " | Custom Skylights & Roof Hatches";
@@ -158,17 +168,51 @@
     if (form) {
       form.addEventListener("submit", function (e) {
         e.preventDefault();
-        var name = form.querySelector("#name");
-        var email = form.querySelector("#email");
-        if (!name.value.trim() || !email.value.trim()) {
+        var nameEl = form.querySelector("#name");
+        var emailEl = form.querySelector("#email");
+        if (!nameEl.value.trim() || !emailEl.value.trim()) {
           note.textContent = "Please add your name and email so we can reach you.";
           note.style.color = "#c0392b";
           return;
         }
+
+        var endpoint = form.getAttribute("data-endpoint");
+        var toEmail = form.getAttribute("data-email") || "";
+        var submitBtn = form.querySelector("button[type=submit]");
+        var payload = {
+          name: nameEl.value.trim(),
+          email: emailEl.value.trim(),
+          phone: (form.querySelector("#phone") || {}).value || "",
+          project_type: (form.querySelector("#type") || {}).value || "",
+          message: (form.querySelector("#message") || {}).value || "",
+          _subject: "New quote request — Panorama Skylight"
+        };
+
         note.style.color = "";
-        note.textContent = "Thanks, " + name.value.trim().split(" ")[0] +
-          "! We'll be in touch within one business day.";
-        form.reset();
+        note.textContent = "Sending…";
+        if (submitBtn) submitBtn.disabled = true;
+
+        function fail() {
+          note.style.color = "#c0392b";
+          note.innerHTML = "Sorry, that didn't send. Please email us at " +
+            '<a href="mailto:' + esc(toEmail) + '">' + esc(toEmail) + "</a>.";
+          if (submitBtn) submitBtn.disabled = false;
+        }
+
+        if (!endpoint || endpoint.indexOf("undefined") !== -1 || !toEmail) { fail(); return; }
+
+        fetch(endpoint, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "Accept": "application/json" },
+          body: JSON.stringify(payload)
+        }).then(function (res) {
+          if (!res.ok) throw new Error("bad status");
+          note.style.color = "";
+          note.textContent = "Thanks, " + payload.name.split(" ")[0] +
+            "! Your request was sent — we'll be in touch within one business day.";
+          form.reset();
+          if (submitBtn) submitBtn.disabled = false;
+        }).catch(fail);
       });
     }
   };

@@ -119,7 +119,8 @@
       { k: "phoneDisplay", label: "Phone — shown on page", type: "text" },
       { k: "phoneHref", label: "Phone — dial code (e.g. +18456004042)", type: "text" },
       { k: "email", label: "Email", type: "text" },
-      { k: "hours", label: "Hours", type: "text" }
+      { k: "hours", label: "Hours", type: "text" },
+      { k: "formEndpoint", label: "Quote form endpoint (leave blank to email the address above)", type: "text" }
     ]},
     { title: "Footer", fields: [
       { k: "footerBlurb", label: "Footer description", type: "textarea" }

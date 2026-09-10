@@ -91,9 +91,9 @@ a { color: inherit; }
 .brand { display: flex; align-items: center; gap: 11px; text-decoration: none; color: var(--sky-900); }
 .brand-mark { flex: none; }
 .brand-lockup { display: flex; flex-direction: column; line-height: 1.05; }
-.brand-name { font-family: var(--font-head); font-size: 1.16rem; font-weight: 700; letter-spacing: .01em; text-transform: uppercase; color: var(--sky-800); }
-.brand-name strong { font-weight: 700; color: var(--sky-600); }
-.brand-tag { font-family: var(--font-head); font-style: italic; font-size: .72rem; color: var(--muted); letter-spacing: .01em; }
+.brand-name { font-family: var(--font-body); font-size: 1.12rem; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; color: var(--sky-800); }
+.brand-name strong { font-weight: 800; color: var(--sky-600); }
+.brand-tag { font-family: var(--font-body); font-style: italic; font-size: .72rem; color: var(--muted); letter-spacing: .01em; }
 
 .nav { display: flex; align-items: center; gap: 28px; }
 .nav a { text-decoration: none; font-weight: 500; color: var(--ink); font-size: .96rem; transition: color .15s; }

@@ -91,6 +91,9 @@ window.PANORAMA_DEFAULT = {
   phoneHref: "+18456004042",
   email: "sales@panoramaskylight.com",
   hours: "Mon–Fri, 8am–5pm",
+  // Where the quote form sends requests. Leave blank to email the address
+  // above via FormSubmit; or paste a Formspree/other endpoint URL.
+  formEndpoint: "",
 
   /* ---- Footer ---- */
   footerBlurb: "Custom skylights, roof hatches & glass windows for residential and commercial projects."
