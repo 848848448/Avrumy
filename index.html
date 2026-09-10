@@ -22,8 +22,8 @@
           <polygon points="60,6 78,40 60,74 42,40" fill="#f4c02f"/>
         </svg>
         <span class="brand-lockup">
-          <span class="brand-name">Panorama <strong>Skylight</strong></span>
-          <span class="brand-tag">the right view</span>
+          <span class="brand-name" data-c="brandName">Panorama Skylight</span>
+          <span class="brand-tag" data-c="brandTag">the right view</span>
         </span>
       </a>
 
@@ -44,72 +44,39 @@
 
   <!-- ===== HERO ===== -->
   <section class="hero">
-    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-photo" id="heroPhoto" aria-hidden="true"></div>
+    <div class="hero-overlay" aria-hidden="true"></div>
     <div class="container hero-inner">
-      <p class="eyebrow">Panorama Skylight • The right view</p>
-      <h1>Bring the sky<br>into every room.</h1>
-      <p class="hero-sub">
-        Handcrafted operable and fixed skylights, roof hatches, and glass windows —
-        built to any shape and finished to last. More daylight, lower energy bills,
-        and a home that feels twice as big.
-      </p>
+      <p class="eyebrow" data-c="heroEyebrow">Panorama Skylight • The right view</p>
+      <h1 data-c="heroTitle">Bring the sky<br>into every room.</h1>
+      <p class="hero-sub" data-c="heroSub">Handcrafted operable and fixed skylights, roof hatches, and glass windows.</p>
       <div class="hero-actions">
-        <a href="#contact" class="btn btn-primary">Get a free quote</a>
-        <a href="#products" class="btn btn-ghost">Explore products</a>
+        <a href="#contact" class="btn btn-primary" data-c="heroBtnPrimary">Get a free quote</a>
+        <a href="#products" class="btn btn-ghost" data-c="heroBtnGhost">Explore products</a>
       </div>
 
       <ul class="hero-stats">
-        <li><span class="stat-num">25+</span><span class="stat-label">Years of craft</span></li>
-        <li><span class="stat-num">Any</span><span class="stat-label">Shape &amp; size</span></li>
-        <li><span class="stat-num">100%</span><span class="stat-label">American-made glass</span></li>
+        <li><span class="stat-num" data-c="stat1n">25+</span><span class="stat-label" data-c="stat1l">Years of craft</span></li>
+        <li><span class="stat-num" data-c="stat2n">Any</span><span class="stat-label" data-c="stat2l">Shape &amp; size</span></li>
+        <li><span class="stat-num" data-c="stat3n">100%</span><span class="stat-label" data-c="stat3l">American-made glass</span></li>
       </ul>
     </div>
   </section>
 
   <!-- ===== TRUST STRIP ===== -->
   <div class="trust-strip">
-    <div class="container trust-inner">
-      <span>★ Tempered double-pane glass</span>
-      <span>★ Argon fill &amp; UV heat-mirror coating</span>
-      <span>★ Copper flashing &amp; aluminum frames</span>
-      <span>★ Opens to a full 90°</span>
-    </div>
+    <div class="container trust-inner" id="trustStrip"></div>
   </div>
 
   <!-- ===== PRODUCTS ===== -->
   <section class="section" id="products">
     <div class="container">
       <div class="section-head">
-        <p class="eyebrow">What we build</p>
-        <h2>Skylights engineered around your roof</h2>
-        <p class="section-lead">
-          Every unit is custom-cut to your opening and finished inside and out.
-          Choose a style — we handle the rest.
-        </p>
+        <p class="eyebrow" data-c="productsEyebrow">What we build</p>
+        <h2 data-c="productsTitle">Skylights engineered around your roof</h2>
+        <p class="section-lead" data-c="productsLead"></p>
       </div>
-
-      <div class="cards">
-        <article class="card">
-          <div class="card-art art-1" aria-hidden="true"></div>
-          <h3>Operable Skylights</h3>
-          <p>Open to a full 90° by quiet air pump or by hand. Fresh air and ventilation on demand, sealed tight when closed.</p>
-        </article>
-        <article class="card">
-          <div class="card-art art-2" aria-hidden="true"></div>
-          <h3>Fixed Skylights</h3>
-          <p>Maximum daylight with a clean, low-profile frame. Insulated and fully finished for a seamless ceiling line.</p>
-        </article>
-        <article class="card">
-          <div class="card-art art-3" aria-hidden="true"></div>
-          <h3>Roof Hatches</h3>
-          <p>Safe, weather-tight roof access with insulated lids and optional shingle finish to match your roofline.</p>
-        </article>
-        <article class="card">
-          <div class="card-art art-4" aria-hidden="true"></div>
-          <h3>Custom Shapes</h3>
-          <p>Round, pyramid, ridge, arched or one-of-a-kind — cut to any shape for residential and commercial builds.</p>
-        </article>
-      </div>
+      <div class="cards" id="productCards"></div>
     </div>
   </section>
 
@@ -117,33 +84,12 @@
   <section class="section section-alt" id="why">
     <div class="container why-grid">
       <div class="why-copy">
-        <p class="eyebrow">Why Skyline</p>
-        <h2>Built better, from glass to flashing.</h2>
-        <p class="section-lead">
-          We don't resell off-the-shelf units. Each skylight is crafted from
-          premium materials chosen to perform for decades — not just to pass inspection.
-        </p>
-        <a href="#contact" class="btn btn-primary">Start your project</a>
+        <p class="eyebrow" data-c="whyEyebrow">Why Panorama</p>
+        <h2 data-c="whyTitle">Built better, from glass to flashing.</h2>
+        <p class="section-lead" data-c="whyLead"></p>
+        <a href="#contact" class="btn btn-primary" data-c="whyBtn">Start your project</a>
       </div>
-
-      <ul class="feature-list">
-        <li>
-          <span class="feat-ic" aria-hidden="true">◆</span>
-          <div><h4>Premium glass</h4><p>Tempered, double-pane, argon-filled glass with a silk-screen heat-mirror coating that blocks UV and solar heat.</p></div>
-        </li>
-        <li>
-          <span class="feat-ic" aria-hidden="true">◆</span>
-          <div><h4>Materials that last</h4><p>Cabinet-grade wood, precision aluminum framing, and copper flashing — engineered to seal out weather.</p></div>
-        </li>
-        <li>
-          <span class="feat-ic" aria-hidden="true">◆</span>
-          <div><h4>Energy efficient</h4><p>More natural daylight and better insulation means lower lighting and heating bills all year.</p></div>
-        </li>
-        <li>
-          <span class="feat-ic" aria-hidden="true">◆</span>
-          <div><h4>Design &amp; install</h4><p>One team from first measurement to final install — seamless, clean, and on schedule.</p></div>
-        </li>
-      </ul>
+      <ul class="feature-list" id="featureList"></ul>
     </div>
   </section>
 
@@ -151,26 +97,10 @@
   <section class="section" id="process">
     <div class="container">
       <div class="section-head">
-        <p class="eyebrow">How it works</p>
-        <h2>Three simple steps to more daylight</h2>
+        <p class="eyebrow" data-c="processEyebrow">How it works</p>
+        <h2 data-c="processTitle">Three simple steps to more daylight</h2>
       </div>
-      <ol class="steps">
-        <li>
-          <span class="step-num">01</span>
-          <h3>Design &amp; measure</h3>
-          <p>We assess your roof, talk through styles, and produce exact specs and a clear quote — no surprises.</p>
-        </li>
-        <li>
-          <span class="step-num">02</span>
-          <h3>Custom build</h3>
-          <p>Your skylight is cut and assembled to order from premium glass and framing in our shop.</p>
-        </li>
-        <li>
-          <span class="step-num">03</span>
-          <h3>Professional install</h3>
-          <p>Our crew installs and weather-seals it cleanly, then walks you through everything before we leave.</p>
-        </li>
-      </ol>
+      <ol class="steps" id="stepsList"></ol>
     </div>
   </section>
 
@@ -178,18 +108,11 @@
   <section class="section section-alt" id="gallery">
     <div class="container">
       <div class="section-head">
-        <p class="eyebrow">Our work</p>
-        <h2>A look at the light</h2>
-        <p class="section-lead">Swap these placeholders for photos of your real installs.</p>
+        <p class="eyebrow" data-c="galleryEyebrow">Our work</p>
+        <h2 data-c="galleryTitle">A look at the light</h2>
+        <p class="section-lead" data-c="galleryLead"></p>
       </div>
-      <div class="gallery">
-        <div class="shot shot-a" aria-hidden="true"></div>
-        <div class="shot shot-b" aria-hidden="true"></div>
-        <div class="shot shot-c" aria-hidden="true"></div>
-        <div class="shot shot-d" aria-hidden="true"></div>
-        <div class="shot shot-e" aria-hidden="true"></div>
-        <div class="shot shot-f" aria-hidden="true"></div>
-      </div>
+      <div class="gallery" id="galleryGrid"></div>
     </div>
   </section>
 
@@ -197,23 +120,10 @@
   <section class="section" id="reviews">
     <div class="container">
       <div class="section-head">
-        <p class="eyebrow">Reviews</p>
-        <h2>Homeowners &amp; builders love the result</h2>
+        <p class="eyebrow" data-c="reviewsEyebrow">Reviews</p>
+        <h2 data-c="reviewsTitle">Homeowners &amp; builders love the result</h2>
       </div>
-      <div class="reviews">
-        <blockquote class="review">
-          <p>"From design to installation the process was seamless. Our kitchen is flooded with light and feels twice the size."</p>
-          <footer>— Sarah M., Homeowner</footer>
-        </blockquote>
-        <blockquote class="review">
-          <p>"The custom shape fit our commercial atrium perfectly. Quality of the glass and flashing is a step above."</p>
-          <footer>— David R., General Contractor</footer>
-        </blockquote>
-        <blockquote class="review">
-          <p>"Operable skylights open with a touch and seal up tight. Energy bills are noticeably lower this year."</p>
-          <footer>— The Feldmans, Homeowners</footer>
-        </blockquote>
-      </div>
+      <div class="reviews" id="reviewsGrid"></div>
     </div>
   </section>
 
@@ -221,15 +131,13 @@
   <section class="section contact" id="contact">
     <div class="container contact-grid">
       <div class="contact-copy">
-        <p class="eyebrow">Get started</p>
-        <h2>Request your free quote</h2>
-        <p class="section-lead">
-          Tell us about your project and we'll get back to you within one business day.
-        </p>
+        <p class="eyebrow" data-c="contactEyebrow">Get started</p>
+        <h2 data-c="contactTitle">Request your free quote</h2>
+        <p class="section-lead" data-c="contactLead"></p>
         <ul class="contact-info">
-          <li><strong>Phone</strong> <a href="tel:+18456004042">(845) 600‑4042</a></li>
-          <li><strong>Email</strong> <a href="mailto:sales@panoramaskylight.com">sales@panoramaskylight.com</a></li>
-          <li><strong>Hours</strong> Mon–Fri, 8am–5pm</li>
+          <li><strong>Phone</strong> <a id="phoneLink" href="tel:+18456004042" data-c="phoneDisplay">(845) 600‑4042</a></li>
+          <li><strong>Email</strong> <a id="emailLink" href="mailto:sales@panoramaskylight.com" data-c="email">sales@panoramaskylight.com</a></li>
+          <li><strong>Hours</strong> <span data-c="hours">Mon–Fri, 8am–5pm</span></li>
         </ul>
       </div>
 
@@ -273,9 +181,9 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <span class="brand-name">Panorama <strong>Skylight</strong></span>
-        <span class="footer-tag">the right view</span>
-        <p>Custom skylights, roof hatches &amp; glass windows for residential and commercial projects.</p>
+        <span class="brand-name" data-c="brandName">Panorama Skylight</span>
+        <span class="footer-tag" data-c="brandTag">the right view</span>
+        <p data-c="footerBlurb"></p>
       </div>
       <nav class="footer-nav" aria-label="Footer">
         <a href="#products">Products</a>
@@ -284,10 +192,11 @@
         <a href="#gallery">Gallery</a>
         <a href="#contact">Get a Quote</a>
       </nav>
-      <p class="footer-legal">© <span id="year"></span> Panorama Skylight. All rights reserved.</p>
+      <p class="footer-legal">© <span id="year"></span> <span data-c="brandName">Panorama Skylight</span>. All rights reserved. · <a class="admin-link" href="admin.html">Edit site</a></p>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="content.js"></script>
+  <script src="site.js"></script>
 </body>
 </html>

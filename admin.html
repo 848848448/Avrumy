@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <title>Panorama Skylight — Content Editor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="admin">
+
+  <!-- ===== Passcode gate ===== -->
+  <div id="gate" class="gate" hidden>
+    <svg width="60" height="42" viewBox="0 0 120 80" aria-hidden="true" style="margin:0 auto 10px">
+      <polygon points="8,74 52,74 30,6" fill="#2b5a9f"/>
+      <polygon points="68,74 112,74 90,6" fill="#2b5a9f"/>
+      <polygon points="60,6 78,40 60,74 42,40" fill="#f4c02f"/>
+    </svg>
+    <h1>Content Editor</h1>
+    <p>Enter the passcode to edit the Panorama Skylight website.</p>
+    <input type="password" id="gatePass" placeholder="Passcode" autocomplete="current-password" />
+    <div class="msg" id="gateMsg"></div>
+    <button class="admin-btn primary" id="gateBtn" style="width:100%">Unlock</button>
+  </div>
+
+  <!-- ===== Editor ===== -->
+  <div id="app" hidden>
+    <div class="admin-topbar">
+      <div class="admin-topbar-inner">
+        <span class="brand-name">Panorama <strong>Skylight</strong></span>
+        <span class="admin-badge">Editor</span>
+        <span class="save-flag" id="saveFlag">All changes saved</span>
+        <div class="admin-actions">
+          <button class="admin-btn" id="previewBtn">Preview site ↗</button>
+          <button class="admin-btn" id="exportBtn">Export</button>
+          <label class="admin-btn" style="cursor:pointer">Import
+            <input type="file" id="importFile" accept="application/json" hidden />
+          </label>
+          <button class="admin-btn ghost-danger" id="resetBtn">Reset all</button>
+          <button class="admin-btn primary" id="saveBtn">Save</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="admin-wrap">
+      <div class="admin-intro">
+        <strong>How this works:</strong> Edit any text or photo below and click
+        <strong>Save</strong> — your changes appear on the website in this browser right away.
+        To publish them for <em>all</em> visitors, click <strong>Export</strong> and send the
+        downloaded file to your developer (or commit it to the site).
+        <br><br>
+        Change the passcode any time in the <em>Settings</em> section at the bottom.
+      </div>
+
+      <form id="editForm"><!-- sections injected here --></form>
+    </div>
+
+    <div class="toast" id="toast"></div>
+  </div>
+
+  <script src="content.js"></script>
+  <script src="site.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>
