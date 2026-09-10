@@ -1,14 +1,14 @@
 /* ===== Skyline Skylights — stylesheet ===== */
 
 :root {
-  --sky-900: #0b2239;
-  --sky-800: #123251;
-  --sky-600: #1f6fb2;
-  --sky-500: #2e8fd6;
-  --sky-300: #9fd2f2;
-  --sky-100: #e8f3fb;
-  --sun: #f2b541;
-  --sun-dark: #d99a1e;
+  --sky-900: #16305c;
+  --sky-800: #1d3f74;
+  --sky-600: #2b5a9f;
+  --sky-500: #3a6cb5;
+  --sky-300: #9db8dc;
+  --sky-100: #e9f0f9;
+  --sun: #f4c02f;
+  --sun-dark: #d9a417;
   --ink: #16222e;
   --muted: #5b6b79;
   --line: #e3e9ef;
@@ -88,10 +88,12 @@ a { color: inherit; }
   border-bottom: 1px solid var(--line);
 }
 .header-inner { display: flex; align-items: center; justify-content: space-between; height: 68px; }
-.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--sky-900); }
-.brand-mark { color: var(--sky-600); flex: none; }
-.brand-name { font-family: var(--font-head); font-size: 1.18rem; font-weight: 500; letter-spacing: -.01em; }
+.brand { display: flex; align-items: center; gap: 11px; text-decoration: none; color: var(--sky-900); }
+.brand-mark { flex: none; }
+.brand-lockup { display: flex; flex-direction: column; line-height: 1.05; }
+.brand-name { font-family: var(--font-head); font-size: 1.16rem; font-weight: 700; letter-spacing: .01em; text-transform: uppercase; color: var(--sky-800); }
 .brand-name strong { font-weight: 700; color: var(--sky-600); }
+.brand-tag { font-family: var(--font-head); font-style: italic; font-size: .72rem; color: var(--muted); letter-spacing: .01em; }
 
 .nav { display: flex; align-items: center; gap: 28px; }
 .nav a { text-decoration: none; font-weight: 500; color: var(--ink); font-size: .96rem; transition: color .15s; }
@@ -154,10 +156,10 @@ a { color: inherit; }
 }
 .card:hover { transform: translateY(-6px); box-shadow: var(--shadow); }
 .card-art { height: 150px; }
-.art-1 { background: linear-gradient(135deg, #2e8fd6, #9fd2f2); }
-.art-2 { background: linear-gradient(135deg, #1f6fb2, #e8f3fb); }
-.art-3 { background: linear-gradient(135deg, #123251, #2e8fd6); }
-.art-4 { background: linear-gradient(135deg, #f2b541, #9fd2f2); }
+.art-1 { background: linear-gradient(135deg, #2b5a9f, #9db8dc); }
+.art-2 { background: linear-gradient(135deg, #1d3f74, #e9f0f9); }
+.art-3 { background: linear-gradient(135deg, #16305c, #3a6cb5); }
+.art-4 { background: linear-gradient(135deg, #f4c02f, #9db8dc); }
 .card h3 { font-size: 1.2rem; margin: 20px 20px 8px; }
 .card p { margin: 0 20px 22px; color: var(--muted); font-size: .96rem; }
 
@@ -189,12 +191,12 @@ a { color: inherit; }
 /* ===== Gallery ===== */
 .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
 .shot { aspect-ratio: 4 / 3; border-radius: var(--radius); }
-.shot-a { background: linear-gradient(135deg, #123251, #2e8fd6); }
-.shot-b { background: linear-gradient(135deg, #2e8fd6, #f2b541); }
-.shot-c { background: linear-gradient(135deg, #1f6fb2, #9fd2f2); }
-.shot-d { background: linear-gradient(135deg, #9fd2f2, #e8f3fb); }
-.shot-e { background: linear-gradient(135deg, #0b2239, #1f6fb2); }
-.shot-f { background: linear-gradient(135deg, #f2b541, #2e8fd6); }
+.shot-a { background: linear-gradient(135deg, #16305c, #2b5a9f); }
+.shot-b { background: linear-gradient(135deg, #2b5a9f, #f4c02f); }
+.shot-c { background: linear-gradient(135deg, #1d3f74, #9db8dc); }
+.shot-d { background: linear-gradient(135deg, #9db8dc, #e9f0f9); }
+.shot-e { background: linear-gradient(135deg, #16305c, #2b5a9f); }
+.shot-f { background: linear-gradient(135deg, #f4c02f, #2b5a9f); }
 
 /* ===== Reviews ===== */
 .reviews { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
@@ -235,8 +237,9 @@ a { color: inherit; }
 /* ===== Footer ===== */
 .site-footer { background: var(--sky-900); color: rgba(255,255,255,.78); padding: 54px 0 34px; }
 .footer-inner { display: grid; gap: 26px; }
-.footer-brand .brand-name { color: #fff; font-size: 1.3rem; }
-.footer-brand strong { color: var(--sky-300); }
+.footer-brand .brand-name { color: #fff; font-size: 1.3rem; display: block; }
+.footer-brand strong { color: var(--sun); }
+.footer-tag { font-family: var(--font-head); font-style: italic; font-size: .9rem; color: var(--sky-300); }
 .footer-brand p { margin: 10px 0 0; max-width: 420px; }
 .footer-nav { display: flex; flex-wrap: wrap; gap: 22px; }
 .footer-nav a { text-decoration: none; color: rgba(255,255,255,.8); font-weight: 500; }

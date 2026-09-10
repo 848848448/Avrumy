@@ -1,6 +1,6 @@
-# Skyline Skylights — website
+# Panorama Skylight — website
 
-A custom skylight company website (starter). Static site, no build step — just
+**"The right view."** Custom skylight company website. Static site, no build step — just
 open `index.html` in a browser or host the folder on any static host
 (GitHub Pages, Netlify, Vercel, etc.).
 
@@ -13,11 +13,12 @@ open `index.html` in a browser or host the folder on any static host
 Product lineup, premium-material messaging, and design→build→install flow drawn
 from industry sites such as skyviewskylight.com and airpowercreations.com.
 
-## To make it yours
-1. **Brand name** — replace "Skyline Skylights" throughout `index.html`, the
-   `<title>`, and the footer.
-2. **Contact details** — update phone, email, and hours in the Contact section.
-3. **Photos** — swap the gradient placeholders (`.card-art`, `.shot`, hero) for
+Brand colors match the logo (blue `#2b5a9f`, gold `#f4c02f`); phone
+(845) 600‑4042 and sales@panoramaskylight.com are wired into the Contact section.
+
+## Still to add
+1. **Logo image** — the inline SVG mark approximates the logo; drop the real
+   logo PNG/SVG in `assets/` and swap it into the header for a pixel-perfect match.
+2. **Photos** — swap the gradient placeholders (`.card-art`, `.shot`, hero) for
    real install photos.
-4. **Quote form** — currently front-end only; connect it to email or a CRM.
-5. **Colors** — tweak the CSS variables at the top of `styles.css`.
+3. **Quote form** — currently front-end only; connect it to email or a CRM.
